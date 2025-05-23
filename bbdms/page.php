@@ -6,143 +6,163 @@ include('includes/config.php');
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>RedRipple - Blood Donation</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font -->
-
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Custom styles */
         body {
-            font-family: 'Roboto', sans-serif; /* Use Roboto font */
-            background-color: #f4f6f9; /* Light background color */
-            color: #333333; /* Darker color for text to ensure visibility */
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            overflow-x: hidden;
         }
 
-        h1 {
-            font-size: 2.8rem; /* Increase font size */
-            font-weight: bold; /* Make it bold */
-            color: #c0392b; /* Dark red color */
-            text-align: center; /* Center align heading */
-            margin-top: 30px; /* Add margin to the top */
-            opacity: 0; /* Start hidden */
-            transform: translateY(-30px); /* Start above */
-            animation: slideIn 0.6s forwards; /* Animation for heading */
+        /* Ensure content is properly spaced below the header */
+        .content-container {
+            padding-top: 80px; /* Prevent overlap with header */
         }
 
-        p {
-            font-size: 1.2rem; /* Increase font size */
-            font-weight: 400; /* Normal font weight */
-            line-height: 1.6; /* Increase line height for readability */
-            margin-bottom: 20px; /* Add margin below paragraphs */
-            opacity: 0; /* Start hidden */
-            transform: translateY(20px); /* Start below */
-            animation: slideIn 0.6s forwards; /* Animation for paragraph */
-            animation-delay: 0.2s; /* Delay for paragraph */
-            color: #444444; /* Dark gray color for better visibility */
+        /* Page Title */
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #c0392b;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: 0.3s ease-in-out;
+        }
+        h2:hover {
+            color: #a93226;
+            transform: scale(1.05);
         }
 
-        .breadcrumb-item a {
-            color: #2980b9; /* Blue color for breadcrumb links */
-            transition: color 0.3s ease; /* Transition for hover effect */
+        /* Breadcrumb */
+        .breadcrumb {
+            background: none;
+            margin-bottom: 15px;
+        }
+        .breadcrumb a {
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #1a5276;
         }
 
-        .breadcrumb-item a:hover {
-            color: #1a5276; /* Darker blue on hover */
+        /* Content Section */
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
 
-        .breadcrumb-item.active {
-            color: #2c3e50; /* Darker color for active breadcrumb */
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #000; /* Set text color to black */
+            font-weight: bold; /* Make text bold */
+            transition: 0.3s ease-in-out;
         }
 
-        .container-fluid {
-            max-width: 1200px; /* Set a max width for the container */
-            margin: 0 auto; /* Center the container */
-            padding: 30px; /* Add padding */
-            background-color: #ffffff; /* White background for the content area */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        .content-section p:hover {
+            color: #c0392b;
+            transform: translateX(5px);
         }
 
-        /* Animation Keyframes */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Call to Action Section */
+        .cta {
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .cta:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Blood Drop Button */
+        .donate-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: #c0392b;
+            padding: 12px 20px;
+            border-radius: 50px 50px 50px 0; /* Blood drop shape */
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            position: relative;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+        
+        .donate-btn i {
+            margin-right: 8px;
+            font-size: 1.4rem;
+        }
+        
+        .donate-btn:hover {
+            background: #e74c3c;
+            color: white;
+            border: 2px solid #e74c3c;
+            transform: scale(1.1);
         }
 
         /* Back to Top Button */
         #backToTop {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none; /* Hidden by default */
-            background-color: #c0392b; /* Red color */
+            bottom: 15px;
+            right: 15px;
+            display: none;
+            background: #c0392b;
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 10px 15px;
+            padding: 10px;
             cursor: pointer;
             z-index: 1000;
+            transition: 0.3s;
         }
 
         #backToTop:hover {
-            background-color: #a93226; /* Darker red on hover */
+            background: #a93226;
         }
 
-        /* Call to Action Section */
-        .cta-section {
-            background-color: #f8d7da; /* Light red background */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .cta-section h2 {
-            color: #c0392b; /* Dark red color */
-        }
-
-        .cta-section p {
-            color: #333333; /* Darker text color */
-        }
-
-        .cta-section .btn {
-            background-color: #c0392b; /* Red color */
-            color: white;
-        }
-
-        .cta-section .btn:hover {
-            background-color: #a93226; /* Darker red on hover */
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
-
 </head>
-
 <body>
 
 <?php include('includes/header.php'); ?>
-    <!-- Page Content -->
-    <div class="container-fluid">
+
+<!-- Content Section -->
+<div class="container content-container">
+    <div class="content-section">
         <?php 
         $pagetype = $_GET['type'];
         $sql = "SELECT type, detail, PageName FROM tblpages WHERE type = :pagetype";
@@ -152,78 +172,64 @@ include('includes/config.php');
         $results = $query->fetchAll(PDO::FETCH_OBJ);
         if ($query->rowCount() > 0) {
             foreach ($results as $result) { ?>
-                <h1 class="mt-4 mb-3"><?php echo htmlentities($result->PageName); ?></h1>
-
+                <h2><?php echo htmlentities($result->PageName); ?></h2>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.php">Home</a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                     <li class="breadcrumb-item active"><?php echo htmlentities($result->PageName); ?></li>
                 </ol>
-
                 <p><?php echo $result->detail; ?></p>
         <?php }
         } else { ?>
-            <h1 class="mt-4 mb-3">Page Not Found</h1>
+            <h2>Page Not Found</h2>
             <p>Sorry, the page you are looking for does not exist.</p>
         <?php } ?>
     </div>
-    <!-- /.container-fluid -->
+</div>
 
-    <!-- Call to Action Section -->
-    <div class="container-fluid cta-section">
-        <h2>Become a Lifesaver Today!</h2>
-        <p>Your blood donation can save lives. Join us in our mission to provide safe blood to those in need.</p>
-        <a href="donate.php" class="btn btn-lg">Donate Now</a>
+<!-- Call to Action Section -->
+<div class="container">
+    <div class="cta">
+        <p>Be a Hero. Save a Life.</p>
+        <a href="become-donar.php" class="donate-btn">
+            <i class="fa fa-tint"></i> Donate Now
+        </a>
     </div>
+</div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">Top</button>
+<!-- Footer -->
+<?php include('includes/footer.php'); ?>
 
-    <!-- Footer -->
-    <?php include('includes/footer.php'); ?>
+<!-- Back to Top Button -->
+<button id="backToTop">Top</button>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/tether/tether.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Trigger animations on page load
-        document.addEventListener("DOMContentLoaded", function() {
-            const headings = document.querySelectorAll('h1');
-            const paragraphs = document.querySelectorAll('p');
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const backToTop = document.getElementById("backToTop");
 
-            headings.forEach((heading, index) => {
-                heading.style.animationDelay = `${index * 0.1}s`;
-                heading.style.opacity = 1;
-                heading.style.transform = 'translateY(0)';
-            });
+        window.addEventListener("scroll", function() {
+            backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+        });
 
-            paragraphs.forEach((paragraph, index) => {
-                paragraph.style.animationDelay = `${index * 0.1 + 0.2}s`;
-                paragraph.style.opacity = 1;
-                paragraph.style.transform = 'translateY(0)';
+        backToTop.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Animate elements on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = "fadeIn 1s forwards";
+                }
             });
         });
 
-        // Back to Top Button
-        const backToTopButton = document.getElementById("backToTop");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-
-        backToTopButton.onclick = function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        };
-    </script>
+        document.querySelectorAll(".content-section, .cta").forEach(el => observer.observe(el));
+    });
+</script>
 
 </body>
-
 </html>

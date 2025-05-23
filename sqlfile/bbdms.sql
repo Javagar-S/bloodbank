@@ -66,11 +66,11 @@ CREATE TABLE `tblblooddonars` (
 --
 
 INSERT INTO `tblblooddonars` (`id`, `FullName`, `MobileNumber`, `EmailId`, `Gender`, `Age`, `BloodGroup`, `Address`, `Message`, `PostingDate`, `status`) VALUES
-(2, 'dasdasd', '41241241241', 'dasdasd@dfdsf.com', 'Male', 34, 'AB-', ' fsdfds', ' fsdf', '2017-06-30 20:48:11', 1),
-(3, 'Ami', '42352352352', '', 'Male', 23, 'A+', NULL, ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2017-07-01 07:21:21', 1),
-(4, 'fdsfsgg', '35345435345', '', 'Female', 26, 'AB-', NULL, ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2017-07-01 07:21:42', 1),
-(6, 'Lyndon Bermoy', '123456789', 'serbermz2020@gmail.com', 'Male', 38, 'AB+', 'India', 'Hey, i want to become a donor ', '2020-07-17 08:51:48', 1),
-(7, 'Demo', '123456789', 'demo@gmail.com', 'Male', 23, 'A-', 'demo', ' demo', '2020-07-17 08:53:51', 1);
+(2, 'Rahul Nair', '9876543210', 'rahul.nair@gmail.com', 'Male', 34, 'AB-', 'Koramangala, Bangalore', 'Available to donate anytime during weekends.', '2017-06-30 20:48:11', 1),
+(3, 'Amit Kumar', '9123456789', 'amit.kumar@gmail.com', 'Male', 23, 'A+', 'Indiranagar, Bangalore', 'Willing to help in emergencies.', '2017-07-01 07:21:21', 1),
+(4, 'Divya Ramesh', '9988776655', 'divya.ramesh@gmail.com', 'Female', 26, 'AB-', 'Whitefield, Bangalore', 'Healthy and ready to donate.', '2017-07-01 07:21:42', 1),
+(6, 'Vinay Raj', '9876541230', 'vinayraj.blr@gmail.com', 'Male', 38, 'AB+', 'HSR Layout, Bangalore', 'Happy to donate. Please contact me.', '2020-07-17 08:51:48', 1),
+(7, 'Kiran S', '7894561230', 'kiran.singh@gmail.com', 'Male', 23, 'A-', 'BTM Layout, Bangalore', 'Available for donation in South Bangalore.', '2020-07-17 08:53:51', 1);
 
 -- --------------------------------------------------------
 
@@ -89,12 +89,15 @@ CREATE TABLE `tblbloodgroup` (
 --
 
 INSERT INTO `tblbloodgroup` (`id`, `BloodGroup`, `PostingDate`) VALUES
-(1, 'A-', '2017-06-30 20:33:50'),
-(2, 'AB-', '2017-06-30 20:34:00'),
-(3, 'O-', '2017-06-30 20:34:05'),
-(4, 'A-', '2017-06-30 20:34:10'),
-(5, 'A+', '2017-06-30 20:34:13'),
-(7, 'AB+', '2020-07-17 08:49:36');
+(1, 'A-', '2025-05-23 10:00:00'),
+(2, 'AB-', '2025-05-23 10:01:00'),
+(3, 'O-', '2025-05-23 10:02:00'),
+(4, 'B-', '2025-05-23 10:03:00'),
+(5, 'A+', '2025-05-23 10:04:00'),
+(6, 'B+', '2025-05-23 10:05:00'),
+(7, 'AB+', '2025-05-23 10:06:00'),
+(8, 'O+', '2025-05-23 10:07:00');
+
 
 -- --------------------------------------------------------
 
