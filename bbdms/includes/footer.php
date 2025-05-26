@@ -224,7 +224,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2024 Red Ripple. All Rights Reserved.</p>
+        <p>&copy; 2025 Red Ripple. All Rights Reserved.</p>
         <div class="app-buttons">
             <a href="https://play.google.com/store/apps" target="_blank">
                 <img src="images/play.avif" alt="Google Play">
