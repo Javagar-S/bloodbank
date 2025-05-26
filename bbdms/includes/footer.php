@@ -209,15 +209,14 @@
             <ul>
                 <li>Email: contact@redripple.com</li>
                 <li>Phone: +123 456 789</li>
-                <li>Address: 123 Red Ripple St, City, Country</li>
+                <li>Address: 123 Red Ripple St, BENGALURU, INDIA</li>
             </ul>
         </div>
         <div class="footer-section">
             <h3 class="footer-title">Follow Us</h3>
             <div class="social-media">
-                <a href="https://facebook.com" target="_blank"><img src="images/fb.jpeg" alt="Facebook"></a>
-                <a href="https://twitter.com" target="_blank"><img src="images/x.png" alt="Twitter"></a>
-                <a href="https://instagram.com" target="_blank"><img src="images/insta.jpeg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/1LxjDwdUr1/" target="_blank"><img src="images/fb.jpeg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/_red.ripple_/" target="_blank"><img src="images/insta.jpeg" alt="Instagram"></a>
                 <a href="https://linkedin.com" target="_blank"><img src="images/lin.png" alt="LinkedIn"></a>
             </div>
         </div>
