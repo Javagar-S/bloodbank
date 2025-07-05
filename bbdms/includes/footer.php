@@ -217,7 +217,7 @@
             <div class="social-media">
                 <a href="https://www.facebook.com/share/1LxjDwdUr1/" target="_blank"><img src="images/fb.jpeg" alt="Facebook"></a>
                 <a href="https://www.instagram.com/_red.ripple_/" target="_blank"><img src="images/insta.jpeg" alt="Instagram"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="images/lin.png" alt="LinkedIn"></a>
+                <a href="https://www.linkedin.com/in/red-ripple-307b95367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/lin.png" alt="LinkedIn"></a>
             </div>
         </div>
     </div>
